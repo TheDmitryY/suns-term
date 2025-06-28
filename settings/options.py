@@ -45,11 +45,11 @@ scan_menu_text = """
 """
 
 scan_tcp_text = """
-    [1] SYN Scan
+    [1] SYN Scan (Root)
     [2] Connect Scan
-    [3] ACK Scan
-    [4] Window Scan
-    [5] Mainmon Scan
+    [3] ACK Scan (Root)
+    [4] Window Scan (Root)
+    [5] Mainmon Scan (Root)
 """
 
 scan_udp_menu = """
