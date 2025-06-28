@@ -103,7 +103,7 @@ def scan_menu() -> None:
     print(Fore.LIGHTCYAN_EX + scan_menu_text)
     option_scan = int(input(Fore.LIGHTCYAN_EX + " > "))
     if option_scan == 1:
-        pass
+        scan_tcp()
     elif option_scan == 2:
         pass
     elif option_scan == 3:
