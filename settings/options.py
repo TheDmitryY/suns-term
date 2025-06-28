@@ -37,3 +37,26 @@ tacleapi_menu_text = """
     [5] Back
     [6] Exit
 """
+
+scan_menu_text = """
+    [1] Scan TCP
+    [2] Scan UDP
+    [3] Scan websites
+"""
+
+scan_tcp_text = """
+    [1] SYN Scan
+    [2] Connect Scan
+    [3] ACK Scan
+    [4] Window Scan
+    [5] Mainmon Scan
+"""
+
+scan_udp_menu = """
+
+
+"""
+
+scan_sites_menu = """
+
+"""

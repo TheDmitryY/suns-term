@@ -1,5 +1,5 @@
 from colorama import Fore
-from settings.options import options_menu, ssh_menu_text, ip_menu_text, project_menu_text, tacleapi_menu_text
+from settings.options import options_menu, ssh_menu_text, ip_menu_text, project_menu_text, tacleapi_menu_text, scan_menu_text, scan_udp_menu,scan_tcp_text,scan_sites_menu
 import os
 
 os.system("clear")
@@ -56,9 +56,9 @@ def ip_menu():
     print(Fore.LIGHTMAGENTA_EX + ip_menu_text)
     option_ip = int(input(Fore.LIGHTGREEN_EX + " > "))
     if option_ip == 1:
-        pass
-    elif option_ip == 2:
         os.system("ifconfig")
+    elif option_ip == 2:
+        scan_menu()
     elif option_ip == 3:
         init_app()
     elif option_ip == 4:
@@ -95,3 +95,53 @@ def tacleapi_menu():
         init_app()
     elif option_api == 6:
         exit
+
+def scan_menu() -> None:
+    os.system("clear")
+    print(Fore.LIGHTCYAN_EX + text)
+    print(Fore.LIGHTCYAN_EX + caption)
+    print(Fore.LIGHTCYAN_EX + scan_menu_text)
+    option_scan = int(input(Fore.LIGHTCYAN_EX + " > "))
+    if option_scan == 1:
+        pass
+    elif option_scan == 2:
+        pass
+    elif option_scan == 3:
+        pass
+    else:
+        init_app()
+
+def scan_udp() -> None:
+    os.system("clear")
+    print(Fore.LIGHTCYAN_EX + text)
+    print(Fore.LIGHTCYAN_EX + caption)
+    print(Fore.LIGHTCYAN_EX + scan_udp_menu)
+    option_udp = int(input(Fore.LIGHTCYAN_EX + " > "))
+    if option_udp == 1:
+        pass
+    elif option_udp == 2:
+        pass
+    elif option_udp == 3:
+        pass
+
+def scan_tcp() -> None:
+    os.system("clear")
+    print(Fore.LIGHTCYAN_EX + text)
+    print(Fore.LIGHTCYAN_EX + caption)
+    print(Fore.LIGHTCYAN_EX + scan_tcp_text)
+    option_tcp = int(input(Fore.LIGHTCYAN_EX + " > "))
+    if option_tcp == 1:
+        ip = input(Fore.LIGHTCYAN_EX + "Enter IP > ")
+        os.system(f"nmap -sS {ip}")
+    elif option_tcp == 2:
+        ip = input(Fore.LIGHTCYAN_EX + "Enter IP > ")
+        os.system(f"nmap -sT {ip}")
+    elif option_tcp == 3:
+        ip = input(Fore.LIGHTCYAN_EX + "Enter IP > ")
+        os.system(f"nmap -sA {ip}")
+    elif option_tcp == 4:
+        ip = input(Fore.LIGHTCYAN_EX + "Enter IP > ")
+        os.system(f"nmap -sW {ip}")
+    elif option_tcp == 5:
+        ip = input(Fore.LIGHTCYAN_EX + "Enter IP > ")
+        os.system(f"nmap -sM {ip}")
